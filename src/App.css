@@ -1,0 +1,80 @@
+/* MAIN SECTION */
+
+.main {
+  justify-items: center;
+}
+
+/* GAME PRESENTATION */
+.mainHeader {
+  color: #eee;
+}
+
+.gameInstruction {
+  color: #eee;
+  margin: 100px;
+}
+
+
+/* BOARD STYLES */
+
+.gameBoard {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.square {
+  color: #eee;
+  width: clamp(30px, 40px, 50px);
+  height: clamp(30px, 40px, 50px);
+  margin: 8px;
+  padding: 12px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  align-content: center;
+}
+
+.isTurn {
+  background-color: #818181;
+  color: #eee;
+}
+
+
+.gameTurns {
+  display: flex;
+  justify-content: center;
+  margin-top: 12px;
+}
+
+/* WINNER BOARD STYLE */
+
+.winnerBoard {
+  color: #eee;
+  width: fit-content;
+  height: fit-content;
+  margin: 12px;
+  padding: 12px;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  justify-items: center;
+}
+
+/* RESTART GAME BUTTON*/
+
+.restartGameButton {
+  color: #eee;
+  background-color: #222;
+  width: fit-content;
+  height: fit-content;
+  margin: 40px 0 28px 0;
+  padding: 12px;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  justify-items: center;
+  cursor: pointer;
+}
+
+.restartGameButton:hover {
+  color: #222;
+  background-color: #ccc;
+  border: 1px solid #222;
+}
