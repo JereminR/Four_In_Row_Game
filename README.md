@@ -1,2 +1,2 @@
-# FourthInRow
-This is a fourth in row game
+# FourInRow
+This is a four in row game
