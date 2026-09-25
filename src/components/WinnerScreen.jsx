@@ -4,22 +4,28 @@ import {RestartGameButton} from './RestartGameButton.jsx'
 export function WinnerScreen({winner, resetGame}) {
     if (winner !== null && winner !== false) {
         return(
-        <section className='winnerBoard'>
-            <span> Winner: </span>
-            <div className='square'>
-                {
-                    winner
-                }
+        <section className='winnerBoardModal'>
+            <div className='winnerBoard'>
+                <span> Winner: </span>
+                <div className='square'>
+                    {
+                        winner
+                    }
+                </div>
+                <RestartGameButton resetGame={resetGame}></RestartGameButton>
+                <button className='winnerCloserButton'> X </button>
             </div>
-            <RestartGameButton resetGame={resetGame}></RestartGameButton>
         </section>
         )
     }
     else if (winner === false) {
         return(
-        <section className='winnerBoard'>
-            <span> Draw </span>
-            <RestartGameButton resetGame={resetGame}></RestartGameButton>
+        <section className='winnerBoardModal'>
+            <div className='winnerBoard'>
+                <span> Draw </span>
+                <RestartGameButton resetGame={resetGame}></RestartGameButton>
+            </div>
+            
         </section>
         )
     }

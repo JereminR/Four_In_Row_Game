@@ -7,11 +7,11 @@
 /* GAME PRESENTATION */
 .mainHeader {
   color: #eee;
+  margin: 40px 0 16px 0
 }
 
 .gameInstruction {
   color: #eee;
-  margin: 100px;
 }
 
 
@@ -24,8 +24,8 @@
 
 .square {
   color: #eee;
-  width: clamp(30px, 40px, 50px);
-  height: clamp(30px, 40px, 50px);
+  width: clamp(25px, 30px, 35px);
+  height: clamp(25px, 30px, 35px);
   margin: 8px;
   padding: 12px;
   border: 1px solid #eee;
@@ -34,7 +34,7 @@
 }
 
 .isTurn {
-  background-color: #818181;
+  background-color: #515151;
   color: #eee;
 }
 
@@ -47,6 +47,24 @@
 
 /* WINNER BOARD STYLE */
 
+.winnerBoardModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  backdrop-filter: blur(5px);
+  background-color: rgba(0, 0, 0, 0.5);
+
+  z-index: 100;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
 .winnerBoard {
   color: #eee;
   width: fit-content;
@@ -58,6 +76,21 @@
   justify-items: center;
 }
 
+.winnerCloserButton {
+  color: #eee;
+  background-color: #222;
+  top: 1000;
+  right: 1000;
+  border: 1px solid #eee;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.winnerCloserButton:hover {
+  color: #222;
+  background-color: #eee;
+}
+
 /* RESTART GAME BUTTON*/
 
 .restartGameButton {
@@ -65,7 +98,7 @@
   background-color: #222;
   width: fit-content;
   height: fit-content;
-  margin: 40px 0 28px 0;
+  margin: 36px 0 28px 0;
   padding: 12px;
   border: 1px solid #eee;
   border-radius: 12px;
@@ -77,4 +110,23 @@
   color: #222;
   background-color: #ccc;
   border: 1px solid #222;
+}
+
+/* QUERIS SECTION */
+
+@media screen and (min-width: 46rem) {
+  .mainHeader {
+    color: #eee;
+    margin: 40px 0 32px 0
+  }
+  .square {
+    color: #eee;
+    width: clamp(25px, 45px, 50px);
+    height: clamp(25px, 45px, 50px);
+    margin: 8px;
+    padding: 12px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    align-content: center;
+  }
 }
