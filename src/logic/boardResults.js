@@ -1,6 +1,11 @@
 import {winnerValues} from './constants.js'
 
-//Check if there is a winner
+//Check if it's draw (to be used in the next constant "checkWinner")
+export const checkDraw = (boardToCheck)=>{
+    return boardToCheck.every((square) => square !== null)
+}
+
+//Check if there is a winner, draw or anything yet
 export const checkWinner = (boardToCheck)=>{
     for (const value of winnerValues) {
         const [a, b, c, d] = value;
@@ -12,10 +17,11 @@ export const checkWinner = (boardToCheck)=>{
             return boardToCheck[a];
         }
     }
+
+    if (checkDraw(boardToCheck)) {
+        return false;
+    }
+
     return null;
 }
 
-//Check if it's draw
-export const checkDraw = (boardToCheck)=>{
-    return boardToCheck.every((square) => square !== null)
-}

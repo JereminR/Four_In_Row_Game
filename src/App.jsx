@@ -3,7 +3,6 @@ import './App.css'
 import {Board} from './components/Board.jsx'
 import {turns} from './logic/constants.js'
 import {checkWinner} from './logic/boardResults.js'
-import {checkDraw} from './logic/boardResults.js'
 import {WinnerScreen} from './components/WinnerScreen.jsx'
 import {RestartGameButton} from './components/RestartGameButton.jsx'
 import {saveLocalStorageGame, deleteLocalStorageGame} from './logic/localStorage/index.js'
@@ -20,7 +19,7 @@ function App() {
   })
   const [winner, setWinner] = useState(()=>{
     const winnerFromStorage = window.localStorage.getItem('winnerStorage')
-    return winnerFromStorage ? JSON.parse(winnerFromStorage) : null;
+    return winnerFromStorage !== null ? JSON.parse(winnerFromStorage) : null;
   })
 
   //Updates the game board when you place a token
@@ -37,10 +36,9 @@ function App() {
     setTurn(newTurn);
 
     //Set winner or draw
-    const newWinner = checkWinner(newBoard)
-    if (newWinner) setWinner(newWinner)
-    else if (checkDraw(newBoard)) setWinner(false)
-
+    const newWinner = checkWinner(newBoard);
+    setWinner(newWinner);
+    
     //Save board, turn and winner of the game
     saveLocalStorageGame(newBoard, newTurn, newWinner);
   }
