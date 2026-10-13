@@ -1,6 +1,9 @@
+import {Square} from './Square.jsx'
+
 export function SquareTurns ({children, isTurn}) {
     const classTurns = `square ${isTurn ? 'isTurn':''}`;
     return(
-        <div className = {classTurns}> {children} </div>   
+        <Square> {children} </Square>
     )
+    //<div className = {classTurns}> {children} </div>
 }

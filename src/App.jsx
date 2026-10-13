@@ -54,9 +54,9 @@ function App() {
 
   return (
     <>
-      <main className = 'main'>
-        <h1 className='mainHeader'> 4 in Row </h1>
-        <span className='gameInstruction'> The first player filling 4 lines wins </span>
+      <main>
+        <h1> 4 in Row </h1>
+        <p> The first player filling 4 lines wins </p>
         <RestartGameButton resetGame={resetGame}></RestartGameButton>
         <Board board={board} turn={turn} turns={turns} updateBoard={updateBoard}></Board>
         <WinnerScreen winner={winner} resetGame = {resetGame}></WinnerScreen>
