@@ -6,6 +6,7 @@ export function Square ({index, children, updateBoard}) {
         updateBoard(index);
     }
 
+
     return(
         <div className='square' onClick={handleClick}>
             {children}

@@ -6,8 +6,8 @@ export function Board ({board, turn, turns, updateBoard}) {
     //const classTurns = `square ${isTurn ? 'isTurn':''}`
 
     return(
-    <section className='game'>
-        <div className='gameBoard'>
+    <section className>
+        <div className='grid grid-cols-4'>
             {
                 board.map((indiBoard, index)=>{
                 return(
@@ -19,7 +19,7 @@ export function Board ({board, turn, turns, updateBoard}) {
             }
         </div>
     
-        <div className='gameTurns'> 
+        <div className='flex mt-3 justify-center'> 
             <SquareTurns isTurn={turn === turns.X}> {turns.X}</SquareTurns>
             <SquareTurns isTurn={turn === turns.O}> {turns.O}</SquareTurns>
         </div>
