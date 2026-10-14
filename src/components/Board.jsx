@@ -1,5 +1,4 @@
 import {Square} from './Square.jsx'
-import {SquareTurns} from './SquareTurns.jsx'
 
 //Contains the game board where you can play
 export function Board ({board, turn, turns, updateBoard}) {
@@ -20,8 +19,8 @@ export function Board ({board, turn, turns, updateBoard}) {
         </div>
     
         <div className='flex mt-3 justify-center'> 
-            <SquareTurns isTurn={turn === turns.X}> {turns.X}</SquareTurns>
-            <SquareTurns isTurn={turn === turns.O}> {turns.O}</SquareTurns>
+            <Square isTurn={turn === turns.X}> {turns.X}</Square>
+            <Square isTurn={turn === turns.O}> {turns.O}</Square>
         </div>
     </section>
     )

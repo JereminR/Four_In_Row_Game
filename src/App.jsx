@@ -55,8 +55,8 @@ function App() {
   return (
     <>
       <main>
-        <h1> 4 in Row </h1>
-        <p> The first player filling 4 lines wins </p>
+        <h1> Tic-Tac-Toe 4x4 </h1>
+        <p> The first player to get 4 in a row wins </p>
         <RestartGameButton resetGame={resetGame}></RestartGameButton>
         <Board board={board} turn={turn} turns={turns} updateBoard={updateBoard}></Board>
         <WinnerScreen winner={winner} resetGame = {resetGame}></WinnerScreen>
